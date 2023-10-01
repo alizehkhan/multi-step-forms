@@ -1,12 +1,12 @@
 import { MemoryRouter } from 'react-router-dom'
-import { it, describe, expect } from 'vitest'
+import { test, describe, expect } from 'vitest'
 import { render, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 
 import DeveloperForm from './DeveloperForm'
 
 describe('<DeveloperForm />', () => {
-  it('Completing the form should display a summary of the information entered', () => {
+  test('Completing the form should display a summary of the information entered', () => {
     const data = {
       age: '45',
       email: 'spongebob@gmail.com',

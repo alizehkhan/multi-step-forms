@@ -26,7 +26,7 @@ const DesignerForm = () => {
             type="submit"
             className="block bg-green-800 mt-8 text-white rounded-md px-4 py-2"
           >
-            Continue 👉🏼
+            Continue
           </button>
         )}
       </form>

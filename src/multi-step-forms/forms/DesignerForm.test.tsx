@@ -1,12 +1,12 @@
 import { MemoryRouter } from 'react-router-dom'
-import { it, describe, expect } from 'vitest'
+import { test, describe, expect } from 'vitest'
 import { render, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 
 import DesignerForm from './DesignerForm'
 
 describe('<DesignerForm />', () => {
-  it('Completing the form should display a summary of the information entered', () => {
+  test('Completing the form should display a summary of the information entered', () => {
     const data = {
       firstName: 'Spongebob',
       lastName: 'Squarepants',
