@@ -8,7 +8,7 @@ const Apply = () => {
         <li>
           <Link
             to="/buy/insurance-developer"
-            className="bg-white shadow-md px-8 py-4 inline-block rounded-md mt-4"
+            className="bg-white shadow-sm hover:shadow-md hover:scale-[1.02] transition-all px-8 py-4 inline-block rounded-md mt-4"
           >
             👨🏼‍💻 Developer insurance
           </Link>
@@ -16,7 +16,7 @@ const Apply = () => {
         <li>
           <Link
             to="/buy/insurance-designer"
-            className="bg-white shadow-md px-8 py-4 inline-block rounded-md mt-4"
+            className="bg-white shadow-sm hover:shadow-md hover:scale-[1.02] transition-all px-8 py-4 inline-block rounded-md mt-4"
           >
             🧑🏼‍🎨 Designer insurance
           </Link>

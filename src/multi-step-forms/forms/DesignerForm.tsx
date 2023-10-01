@@ -24,7 +24,7 @@ const DesignerForm = () => {
         {step < steps.length - 1 && (
           <button
             type="submit"
-            className="block bg-green-800 mt-8 text-white rounded-md px-4 py-2"
+            className="block bg-green-800 shadow-sm hover:scale-[1.02] hover:shadow-md transition-all mt-8 text-white rounded-md px-4 py-2"
           >
             Continue
           </button>

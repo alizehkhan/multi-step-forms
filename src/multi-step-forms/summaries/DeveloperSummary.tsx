@@ -17,9 +17,9 @@ const DeveloperSummary = <Form extends DeveloperFormData>({
       <p className="mb-4 font-bold text-xl">{age}</p>
       <Link
         to="/purchased"
-        className="inline-block bg-green-800 mt-8 text-white rounded-md px-4 py-2"
+        className="inline-bloc shadow-sm hover:scale-[1.02] hover:shadow-md transition-all bg-green-800 mt-8 text-white rounded-md px-4 py-2"
       >
-        Buy 💳
+        💳 Buy
       </Link>
     </>
   )
