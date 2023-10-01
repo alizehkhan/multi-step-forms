@@ -1,10 +1,11 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/c18c4bec-76a9-4df4-af59-e7e904d7f1fa/deploy-status)](https://app.netlify.com/sites/multistepforms-react/deploys)
+
 # Multi-step forms
 
 ## Description
 
 - Sets up a reusable workflow for multi-step forms.
 - Two insurance purchase forms have been implemented using this workflow / template.
-- Minimal styling has been implemented for this feature on purpose.
 
 ### Designer Insurance
 
@@ -51,8 +52,8 @@ Inside the `multi-step-forms` feature directory:
 ### How to run this repo
 
 - Install all dependencies with `yarn`.
-- Run `yarn start` to start the server.
-- Visit `localhost:3000` to view the app.
+- Run `yarn dev` to start the server.
+- Visit [http://localhost:5173/](http://localhost:5173/) to view the app.
 
 ### How to run integration tests
 
