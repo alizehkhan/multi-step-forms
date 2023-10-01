@@ -6,7 +6,7 @@ import userEvent from '@testing-library/user-event'
 import DeveloperForm from './DeveloperForm'
 
 describe('<DeveloperForm />', () => {
-  test('Completing the form should display a summary of the information entered', () => {
+  test('Completing the form should display a summary of the information entered', async () => {
     const data = {
       age: '45',
       email: 'spongebob@gmail.com',
@@ -18,15 +18,15 @@ describe('<DeveloperForm />', () => {
       </MemoryRouter>
     )
 
-    expect(screen.getByLabelText('Age')).toHaveAttribute('required')
+    expect(screen.getByLabelText('Age')).toBeRequired()
 
-    userEvent.type(screen.getByLabelText('Age'), data.age)
-    userEvent.click(screen.getByRole('button', { name: 'Continue' }))
+    await userEvent.type(screen.getByLabelText('Age'), data.age)
+    await userEvent.click(screen.getByRole('button', { name: 'Continue' }))
 
-    expect(screen.getByLabelText('Email')).toHaveAttribute('required')
+    expect(screen.getByLabelText('Email')).toBeRequired()
 
-    userEvent.type(screen.getByLabelText('Email'), data.email)
-    userEvent.click(screen.getByRole('button', { name: 'Continue' }))
+    await userEvent.type(screen.getByLabelText('Email'), data.email)
+    await userEvent.click(screen.getByRole('button', { name: 'Continue' }))
 
     expect(screen.getByText(data.age)).toBeInTheDocument()
     expect(screen.getByText(data.email)).toBeInTheDocument()

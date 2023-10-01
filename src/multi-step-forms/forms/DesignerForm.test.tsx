@@ -6,7 +6,7 @@ import userEvent from '@testing-library/user-event'
 import DesignerForm from './DesignerForm'
 
 describe('<DesignerForm />', () => {
-  test('Completing the form should display a summary of the information entered', () => {
+  test('Completing the form should display a summary of the information entered', async () => {
     const data = {
       firstName: 'Spongebob',
       lastName: 'Squarepants',
@@ -20,22 +20,22 @@ describe('<DesignerForm />', () => {
       </MemoryRouter>
     )
 
-    expect(screen.getByLabelText('First name')).toHaveAttribute('required')
-    expect(screen.getByLabelText('Last name')).toHaveAttribute('required')
+    expect(screen.getByLabelText('First name')).toBeRequired()
+    expect(screen.getByLabelText('Last name')).toBeRequired()
 
-    userEvent.type(screen.getByLabelText('First name'), data.firstName)
-    userEvent.type(screen.getByLabelText('Last name'), data.lastName)
-    userEvent.click(screen.getByRole('button', { name: 'Continue' }))
+    await userEvent.type(screen.getByLabelText('First name'), data.firstName)
+    await userEvent.type(screen.getByLabelText('Last name'), data.lastName)
+    await userEvent.click(screen.getByRole('button', { name: 'Continue' }))
 
-    expect(screen.getByLabelText('Age')).toHaveAttribute('required')
+    expect(screen.getByLabelText('Age')).toBeRequired()
 
-    userEvent.type(screen.getByLabelText('Age'), data.age)
-    userEvent.click(screen.getByRole('button', { name: 'Continue' }))
+    await userEvent.type(screen.getByLabelText('Age'), data.age)
+    await userEvent.click(screen.getByRole('button', { name: 'Continue' }))
 
-    expect(screen.getByLabelText('Email')).toHaveAttribute('required')
+    expect(screen.getByLabelText('Email')).toBeRequired()
 
-    userEvent.type(screen.getByLabelText('Email'), data.email)
-    userEvent.click(screen.getByRole('button', { name: 'Continue' }))
+    await userEvent.type(screen.getByLabelText('Email'), data.email)
+    await userEvent.click(screen.getByRole('button', { name: 'Continue' }))
 
     expect(screen.getByText(data.firstName)).toBeInTheDocument()
     expect(screen.getByText(data.lastName)).toBeInTheDocument()
